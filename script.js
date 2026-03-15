@@ -219,29 +219,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Simulate send
-      btn.textContent = 'Sending…';
+     btn.textContent = 'Sending…';
       btn.disabled = true;
       btn.style.opacity = '0.7';
 
-      setTimeout(() => {
-        btn.textContent = '✓ Message Sent!';
-        btn.style.background = 'rgba(0,255,136,0.15)';
-        btn.style.color = 'var(--green)';
-        btn.style.border = '1px solid rgba(0,255,136,0.3)';
-        btn.style.opacity = '1';
+      fetch('https://formspree.io/f/mqeydnqd', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message: msg })
+      })
+      .then(res => {
+        if (res.ok) {
+          btn.textContent = '✓ Message Sent!';
+          btn.style.background = 'rgba(0,255,136,0.15)';
+          btn.style.color = 'var(--green)';
+          btn.style.border = '1px solid rgba(0,255,136,0.3)';
+          btn.style.opacity = '1';
 
-        form.querySelectorAll('input, textarea').forEach(input => {
-          input.value = '';
-        });
+          form.querySelectorAll('input, textarea').forEach(input => {
+            input.value = '';
+          });
 
-        setTimeout(() => {
-          btn.textContent = 'Send Message →';
+          setTimeout(() => {
+            btn.textContent = 'Send Message →';
+            btn.disabled = false;
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.style.border = '';
+          }, 3500);
+        } else {
+          btn.textContent = 'Failed. Try again.';
+          btn.style.color = 'red';
           btn.disabled = false;
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.style.border = '';
-        }, 3500);
-      }, 1400);
+          btn.style.opacity = '1';
+        }
+      })
+      .catch(() => {
+        btn.textContent = 'Error. Try again.';
+        btn.style.color = 'red';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      });
     });
   }
 
