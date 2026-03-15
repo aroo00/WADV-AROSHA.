@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vimukthi Arosha — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Ambient background orbs -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!--NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">VA<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ───────────── HERO ───────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for work
+      </div>
+      <h1 class="hero-title">
+        <span class="line">Vimukthi</span>
+        <span class="line accent">Arosha</span>
+      </h1>
+      <p class="hero-role">
+        <span class="role-label">Full Stack Developer</span>
+        <span class="role-sep">·</span>
+        <span class="role-label">UI/UX Enthusiast</span>
+      </p>
+      <p class="hero-desc">
+        I craft fast, beautiful digital experiences — from architecture to pixel. Clean code. Bold design. Zero compromise.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <div class="avatar-initials">AR</div>
+        </div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ───────────── ABOUT ───────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-num">01</span>
+        <span class="label-text">About Me</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Building the web,<br /><em>one pixel at a time.</em></h2>
+          <p>I'm a full-stack developer with 5+ years of experience building scalable web applications. I thrive at the intersection of engineering and design — writing code that performs and interfaces that delight.</p>
+          <p>When I'm not shipping products, I'm exploring emerging tech, contributing to open source, and obsessing over typography.</p>
+          <div class="about-stats">
+            <div class="stat-card glass-card">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-num">40+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-card-header">
+            <span class="card-dot red"></span>
+            <span class="card-dot yellow"></span>
+            <span class="card-dot green"></span>
+          </div>
+          <div class="about-code">
+            <p><span class="code-key">const</span> <span class="code-var">developer</span> = {</p>
+            <p class="indent"><span class="code-key">name</span>: <span class="code-str">"Vimukthi Arosha"</span>,</p>
+            <p class="indent"><span class="code-key">location</span>: <span class="code-str">"Srilanka, CMB"</span>,</p>
+            <p class="indent"><span class="code-key">role</span>: <span class="code-str">"Full Stack Developer"</span>,</p>
+            <p class="indent"><span class="code-key">passion</span>: <span class="code-str">"Clean code + Bold design"</span>,</p>
+            <p class="indent"><span class="code-key">available</span>: <span class="code-bool">true</span></p>
+            <p>};</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── PROJECTS ───────────── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-num">02</span>
+        <span class="label-text">Projects</span>
+      </div>
+      <h2 class="section-title">Selected Work</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card glass-card featured reveal">
+          <div class="project-tag">Featured</div>
+          <div class="project-num">01</div>
+          <h3 class="project-title">NexaFlow</h3>
+          <p class="project-desc">A real-time workflow automation platform built with React, Node.js, and WebSockets. Handles 50k+ events/min with sub-100ms latency.</p>
+          <div class="project-stack">
+            <span>React</span><span>Node.js</span><span>Redis</span><span>WebSocket</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live ↗</a>
+            <a href="#" class="link-btn ghost">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-num">02</div>
+          <h3 class="project-title">Luminex UI</h3>
+          <p class="project-desc">An open-source component library with 60+ accessible, customizable components for modern web apps.</p>
+          <div class="project-stack">
+            <span>TypeScript</span><span>Storybook</span><span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live ↗</a>
+            <a href="#" class="link-btn ghost">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-num">03</div>
+          <h3 class="project-title">AuraAI</h3>
+          <p class="project-desc">AI-powered creative writing assistant with contextual memory, tone analysis, and multi-style generation.</p>
+          <div class="project-stack">
+            <span>Python</span><span>FastAPI</span><span>OpenAI</span><span>Vue</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live ↗</a>
+            <a href="#" class="link-btn ghost">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-num">04</div>
+          <h3 class="project-title">Cartography</h3>
+          <p class="project-desc">A privacy-first location journaling app with offline maps, custom overlays, and end-to-end encryption.</p>
+          <div class="project-stack">
+            <span>React Native</span><span>MapLibre</span><span>SQLite</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">Live ↗</a>
+            <a href="#" class="link-btn ghost">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── SKILLS ───────────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-num">03</span>
+        <span class="label-text">Skills</span>
+      </div>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group glass-card reveal">
+          <div class="skill-icon">⚡</div>
+          <h4>Frontend</h4>
+          <ul>
+            <li>React / Next.js</li>
+            <li>TypeScript</li>
+            <li>Vue.js</li>
+            <li>CSS / Tailwind</li>
+            <li>WebGL / Three.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-group glass-card reveal">
+          <div class="skill-icon">🛠</div>
+          <h4>Backend</h4>
+          <ul>
+            <li>Node.js / Express</li>
+            <li>Python / FastAPI</li>
+            <li>Go</li>
+            <li>REST & GraphQL</li>
+            <li>WebSockets</li>
+          </ul>
+        </div>
+
+        <div class="skill-group glass-card reveal">
+          <div class="skill-icon">☁️</div>
+          <h4>Cloud & DevOps</h4>
+          <ul>
+            <li>AWS / GCP</li>
+            <li>Docker / Kubernetes</li>
+            <li>CI/CD Pipelines</li>
+            <li>PostgreSQL / Redis</li>
+            <li>Terraform</li>
+          </ul>
+        </div>
+
+        <div class="skill-group glass-card reveal">
+          <div class="skill-icon">🎨</div>
+          <h4>Design</h4>
+          <ul>
+            <li>Figma</li>
+            <li>Motion Design</li>
+            <li>Design Systems</li>
+            <li>Accessibility</li>
+            <li>Prototyping</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── CONTACT ───────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-num">04</span>
+        <span class="label-text">Contact</span>
+      </div>
+      <div class="contact-inner">
+        <div class="contact-text">
+          <h2 class="section-title">Let's build<br /><em>something great.</em></h2>
+          <p>Open to full-time roles, freelance projects, and interesting collaborations. Don't hesitate to reach out.</p>
+          <div class="contact-socials">
+            <a href="mailto:alex@example.com" class="social-link glass-card">
+              <span class="social-icon">✉️</span>
+              alex@example.com
+            </a>
+            <a href="#" class="social-link glass-card">
+              <span class="social-icon">💼</span>
+              LinkedIn
+            </a>
+            <a href="#" class="social-link glass-card">
+              <span class="social-icon">🐙</span>
+              GitHub
+            </a>
+            <a href="#" class="social-link glass-card">
+              <span class="social-icon">🐦</span>
+              Twitter / X
+            </a>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell me about your project…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">AR<span class="dot">.</span></span>
+      <span class="footer-copy">© 2025 Alex Rivera. All rights reserved.</span>
+      <span class="footer-made">Made with ♥ & coffee</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
