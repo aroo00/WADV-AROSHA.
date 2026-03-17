@@ -827,4 +827,62 @@ img { display: block; max-width: 100%; }
   .skills-grid { grid-template-columns: 1fr; }
   .about-stats { flex-direction: column; }
   .hero-title { font-size: 3rem; }
-}
+} 
+<style>
+    /* Chat Button */
+    #chat-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Chat Box */
+    #chat-container {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border: 1px solid #ccc;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    #messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .user { text-align: right; color: blue; margin:5px 0; }
+    .bot { text-align: left; color: green; margin:5px 0; }
+
+    #inputBox {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    #input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    button.send {
+      padding: 10px;
+      border: none;
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
