@@ -355,3 +355,68 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+<script>
+const faqData = [
+  {"question":"hi","answer":"Hi! Welcome to my portfolio website 😊 How can I help you?"},
+  {"question":"hello","answer":"Hello! Thanks for visiting. Feel free to ask about my work or skills."},
+  {"question":"who are you","answer":"I am [Your Name], a software engineer and aspiring entrepreneur."},
+  {"question":"about you","answer":"I'm [Your Name], passionate about software engineering, technology, and creating projects that solve problems."},
+  {"question":"projects","answer":"You can see my projects in the Projects section on this website."},
+  {"question":"github","answer":"Check out my GitHub for all my code: [Your GitHub Link]"},
+  {"question":"linkedin","answer":"Connect with me on LinkedIn: [Your LinkedIn Link]"},
+  {"question":"contact","answer":"You can contact me via email: [Your Email] or the Contact form here."},
+  {"question":"skills","answer":"I am skilled in JavaScript, Python, HTML/CSS, React, Node.js, and some backend development."},
+  {"question":"education","answer":"I graduated in Software Engineering from NSBM Green University."},
+  {"question":"freelance","answer":"Yes, I am open to freelance projects. Contact me with your project details."},
+  {"question":"hobbies","answer":"I enjoy learning new technologies, coding, reading, and gaming."},
+  {"question":"experience","answer":"I have experience in web development, programming, and building portfolio projects."},
+  {"question":"cv","answer":"You can download my CV from the Resume section."},
+  {"question":"resume","answer":"Check the Resume section for my detailed experience and education."},
+  {"question":"projects demo","answer":"Live demos for my projects are available in the Portfolio section."},
+  {"question":"tech stack","answer":"My tech stack includes HTML, CSS, JavaScript, React, Node.js, and Python."},
+  {"question":"languages","answer":"I am familiar with JavaScript, Python, and C/C++."},
+  {"question":"full stack","answer":"Yes, I am a full stack developer capable of handling both frontend and backend."},
+  {"question":"availability","answer":"I am generally available for new projects and collaborations."},
+  {"question":"fun fact","answer":"I love experimenting with new technologies and building creative projects."}
+];
+
+function getReply(msg) {
+  msg = msg.toLowerCase();
+  for (let i = 0; i < faqData.length; i++) {
+    if (msg.includes(faqData[i].question)) {
+      return faqData[i].answer;
+    }
+  }
+  return "Sorry, I didn't understand. You can ask about my projects, skills, or contact info.";
+}
+
+function toggleChat() {
+  const chat = document.getElementById("chat-container");
+  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+}
+
+function addMessage(text, sender) {
+  const div = document.createElement("div");
+  div.className = sender;
+  div.innerText = text;
+
+  const messages = document.getElementById("messages");
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById("input");
+  const msg = input.value;
+  if (!msg) return;
+
+  addMessage(msg, "user");
+  input.value = "";
+
+  setTimeout(() => {
+    const reply = getReply(msg);
+    addMessage(reply, "bot");
+  }, 500);
+}
+</script>
+
